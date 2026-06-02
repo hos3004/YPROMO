@@ -269,6 +269,16 @@ function App() {
               </select>
               <label>Text model</label>
               <input value={settings.textModel} onChange={(e) => setSettings({ ...settings, textModel: e.target.value })} />
+              <label>Gemini API key</label>
+              <input
+                type="password"
+                placeholder="AIza..."
+                value={settings.apiKeys.gemini || ''}
+                onChange={(e) => setSettings({
+                  ...settings,
+                  apiKeys: { ...settings.apiKeys, gemini: e.target.value.trim() },
+                })}
+              />
               <label>TTS provider</label>
               <select value={settings.ttsProvider} onChange={(e) => setSettings({ ...settings, ttsProvider: e.target.value as ProviderSettings['ttsProvider'] })}>
                 <option value="mock">Mock</option>
