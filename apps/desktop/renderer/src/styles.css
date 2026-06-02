@@ -1,0 +1,60 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, Arial, sans-serif;
+  background: #111315;
+  color: #f4f0e8;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 1000px; background: #111315; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+
+.app-shell { display: grid; grid-template-columns: 250px 1fr; min-height: 100vh; }
+.sidebar { background: #181a1d; border-left: 1px solid #2c3035; padding: 20px 14px; display: flex; flex-direction: column; gap: 8px; }
+.brand { display: flex; gap: 12px; align-items: center; padding: 8px 10px 22px; color: #f8d36b; }
+.brand strong { display: block; font-size: 22px; }
+.brand span { display: block; color: #a9b0ba; font-size: 12px; margin-top: 3px; }
+.nav-btn { display: flex; align-items: center; gap: 10px; border: 0; background: transparent; color: #c7cdd5; padding: 11px 12px; border-radius: 7px; text-align: right; }
+.nav-btn.active, .nav-btn:hover { background: #2c3035; color: #ffffff; }
+
+.main { min-width: 0; }
+.topbar { height: 82px; border-bottom: 1px solid #2c3035; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; background: #15171a; }
+.topbar h1 { margin: 0; font-size: 24px; }
+.topbar p { margin: 6px 0 0; color: #a9b0ba; font-size: 13px; }
+.workspace { padding: 24px 28px; }
+.two-col { display: grid; grid-template-columns: minmax(0, 1.5fr) 360px; gap: 18px; }
+.panel { border: 1px solid #30343a; background: #1d2024; border-radius: 8px; padding: 18px; }
+.panel.compact { align-self: start; }
+.panel h2, .section-head h2 { margin: 0 0 16px; font-size: 18px; display: flex; align-items: center; gap: 8px; }
+label { display: block; color: #b8bec7; margin: 14px 0 7px; font-size: 13px; }
+input, textarea, select { width: 100%; background: #111315; border: 1px solid #3a4048; color: #f7f2e9; border-radius: 6px; padding: 10px 11px; outline: none; }
+textarea { resize: vertical; line-height: 1.7; }
+input:focus, textarea:focus, select:focus { border-color: #d1a83a; }
+button { border: 1px solid #3a4048; background: #252a30; color: #f5f1e8; border-radius: 6px; padding: 10px 12px; display: inline-flex; align-items: center; gap: 8px; justify-content: center; }
+button.primary { background: #c99421; border-color: #e0b54a; color: #17120a; font-weight: 700; width: 100%; margin-top: 18px; }
+button.icon-text { color: #f7f2e9; }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+.section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.script-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.script-card { border: 1px solid #30343a; background: #1d2024; border-radius: 8px; padding: 14px; position: relative; }
+.script-card.selected { border-color: #d1a83a; box-shadow: 0 0 0 1px rgba(209, 168, 58, 0.3); }
+.script-card h3 { margin: 0 0 10px; }
+.script-card textarea { min-height: 320px; }
+.script-card footer { color: #a9b0ba; margin-top: 10px; font-size: 13px; }
+.select-btn { position: absolute; top: 12px; left: 12px; padding: 6px 10px; }
+.scene-list { display: flex; flex-direction: column; gap: 10px; }
+.scene-row { display: grid; grid-template-columns: 110px minmax(0, 1.1fr) minmax(260px, 0.8fr); gap: 12px; border: 1px solid #30343a; background: #1d2024; border-radius: 8px; padding: 12px; }
+.scene-time { font-size: 28px; font-weight: 800; color: #f2c45b; }
+.scene-time span { display: block; font-size: 12px; color: #a9b0ba; margin-top: 8px; }
+.scene-edit textarea { min-height: 88px; }
+.scene-edit input { margin-top: 8px; }
+.scene-prompts p { color: #c7cdd5; margin: 0 0 10px; line-height: 1.5; }
+.scene-prompts { display: flex; flex-wrap: wrap; gap: 8px; align-content: start; }
+.check { display: inline-flex; align-items: center; gap: 6px; margin: 0; }
+.check input { width: auto; }
+.asset-line { display: flex; justify-content: space-between; border-bottom: 1px solid #30343a; padding: 12px 0; }
+.preview-box { aspect-ratio: 16 / 9; background: linear-gradient(135deg, #0f141c, #2b2619); border: 1px solid #3a4048; border-radius: 8px; display: grid; place-content: center; text-align: center; gap: 8px; }
+.preview-box strong { font-size: 34px; }
+.preview-box span { color: #c7cdd5; }
+.settings-panel { max-width: 680px; }

@@ -1,0 +1,40 @@
+{
+  "name": "ypromo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fast Documentary Promo Builder desktop app",
+  "type": "module",
+  "scripts": {
+    "dev": "tauri dev",
+    "dev:web": "vite --host 127.0.0.1",
+    "build": "npm run typecheck && vite build",
+    "build:app": "tauri build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:smoke": "npm run typecheck && npm run test"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.370",
+    "@remotion/player": "^4.0.370",
+    "@remotion/renderer": "^4.0.370",
+    "@tauri-apps/api": "^2.10.0",
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "remotion": "^4.0.370",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.10.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "jsdom": "^25.0.1",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.16",
+    "vitest": "^2.1.8"
+  }
+}
